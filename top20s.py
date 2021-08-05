@@ -17,8 +17,8 @@ def parse_tiobe(url):
 
     for elem in table_data:
         td_elem = elem.find_all('td')
-        languages.append(td_elem[3].getText())
-        ratings.append(float(td_elem[4].getText()[:-1]))
+        languages.append(td_elem[4].getText())
+        ratings.append(float(td_elem[5].getText()[:-1]))
 
     total = 0.0
 
