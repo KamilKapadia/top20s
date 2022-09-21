@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 def parse_tiobe(url):
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
-    header = soup.find('h2')
+    header = soup.find('h1')
     name = header.find('b').getText()
     results = soup.find(id='top20')
     tbody = results.find('tbody')
